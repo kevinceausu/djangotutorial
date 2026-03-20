@@ -55,3 +55,6 @@ def vote(request, question_id):
         selected_choice.save()
         # Always return an HttpResponseRedirect after successfully dealing with POST data.
         return HttpResponseRedirect(reverse("polls:results", args=(question.id,)))
+    
+def home(request):
+    return render(request, "polls/home.html")
